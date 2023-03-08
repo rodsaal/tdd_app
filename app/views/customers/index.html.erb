@@ -2,5 +2,10 @@
   <p><%= flash[:notice] %></p>
 <% end %>
 <h1>Listando Clientes</h1>
+<ul>
+  <% @customers.each do |customer| %>
+    <li><%= customer.name %></li>
+  <% end %>
+</ul>
 
 <%= link_to "Novo Cliente", new_customer_path %>
